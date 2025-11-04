@@ -586,7 +586,7 @@
       Page3RightAnimation()
       Page3LeftAnimation()
       }
-      if(page === 1 || page === 2){
+      if(page === 1 ){
            Page1_1_1_1_Animation();
       }
       if (page === 4 || page === 5) {
@@ -642,7 +642,7 @@
     { 
       opacity: 1,
       y: 0,
-      duration: 1,         // slightly slower for smoothness
+      duration: 1,          // slightly slower for smoothness
       stagger: 0.15,          // reveal each element one by one
       ease: "power3.out"
     }
@@ -1288,22 +1288,6 @@ function page10_2_Animation() {
   <script type="text/javascript" src="./mainScript.js"></script>
   <script type="text/javascript" src="script.js?v=2"></script>
 
-<script>
-  document.addEventListener("DOMContentLoaded", () => {
-    const preloader = document.getElementById("preloader");
-
-    // Keep preloader visible for a bit longer (e.g., 2.5 seconds)
-    setTimeout(() => {
-      preloader.classList.add("fade-out");
-
-      // Remove preloader from DOM after fade-out completes
-      setTimeout(() => {
-        preloader.style.display = "none";
-      }, 1000); // matches CSS transition time
-    }, 3000); // extra wait before fade starts
-  });
-</script>
-
 
 
 
@@ -1469,6 +1453,7 @@ document.addEventListener("DOMContentLoaded", () => {
         // Remove preloader from DOM after fade-out completes
         setTimeout(() => {
           preloader.style.display = "none";
+             Page1_1_1_1_Animation();
         }, 1000); // matches CSS transition time
       }, 3000); // extra wait before fade starts
     });
